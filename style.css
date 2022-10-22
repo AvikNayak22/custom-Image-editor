@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #aac3da;
+}
+.container {
+  width: 900px;
+  background: #819aec;
+  border-radius: 0px;
+  padding: 30px 35px 35px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.container .disable :where(.editor-panel, .reset-filter, .save-img) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.container h2 {
+  font-size: 22px;
+  font-weight: 500;
+  width: 340px;
+  text-align: center;
+  margin-bottom: 40px;
+  /* border-radius: 0px 0px 15px 15px; */
+  background: linear-gradient(#819aec, #90bce2);
+}
+
+.container .wrapper {
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
+
+.wrapper .editor-panel {
+  width: 280px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background: linear-gradient(#819aec, #90bce2);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.editor-panel .title {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.editor-panel .options,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.editor-panel button {
+  height: 40px;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  background: #fff;
+  /* border: 5px solid white; */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.editor-panel button:hover {
+  background: #f5f5f5;
+}
+
+.editor-panel .filter button {
+  width: calc(100% / 2 - 5px);
+}
+
+.filter button.active {
+  color: #fff;
+  background: #5372f0;
+  border-color: #5372f0;
+}
+
+.filter .slider {
+  margin-top: 12px;
+}
+
+.filter .slider .filter-info {
+  display: flex;
+  color: #464646;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.filter .slider input {
+  width: 100%;
+  height: 5px;
+  accent-color: #5372f0;
+}
+
+.editor-panel .rotate {
+  margin-top: 17px;
+}
+
+.editor-panel .rotate button {
+  width: calc(100% / 4 - 3px);
+}
+
+.rotate button:nth-child(3),
+.rotate button:nth-child(4) {
+  font-size: 18px;
+}
+
+.wrapper .preview-img {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background: white;
+}
+
+.preview-img img {
+  max-width: 490px;
+  max-height: 335px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.controls button {
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background: #fff;
+  padding: 11px 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-transform: uppercase;
+}
+
+.controls .reset-filter {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.controls .reset-filter:hover {
+  background: linear-gradient(45deg, red, rgb(255, 0, 242));
+  color: white;
+}
+
+.controls .choose-img {
+  background: #6c757d;
+  border: 1px solid #6c757d;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.controls .save-img {
+  margin-left: 5px;
+  background: #5372f0;
+  border: 1px solid #5372f0;
+}
+.controls .save-img:hover {
+  background: linear-gradient(#073, #0fa);
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    padding: 25px;
+  }
+
+  .container .wrapper {
+    flex-wrap: wrap-reverse;
+  }
+
+  .wrapper .editor-panel {
+    width: 100%;
+  }
+
+  .wrapper .preview-img {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .controls button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .controls .row {
+    width: 100%;
+  }
+
+  .controls .row .save-img {
+    margin-left: 0px;
+  }
+}
